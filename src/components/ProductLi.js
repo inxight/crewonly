@@ -31,9 +31,9 @@ function ProductLi(props) {
   
   const onPressWish = (val, str) => {
     if (props.mt_id) {
-      Api.send('wish_input', { rel_table: 'product', rel_item: val, mt_id: props.mt_id }, (args)=>{
-        let resultItem = args.resultItem;
-        if (resultItem.result === 'Y') {
+      // Api.send('wish_input', { rel_table: 'product', rel_item: val, mt_id: props.mt_id }, (args)=>{
+      //   let resultItem = args.resultItem;
+      //   if (resultItem.result === 'Y') {
           setIsWish(str);
 
           if (props.screen==='ProductList' || props.screen==='ShopDetail') {
@@ -41,8 +41,8 @@ function ProductLi(props) {
           } else {
             props.set_idx(props.screen, '', new Date());
           }
-        }
-      });
+      //   }
+      // });
     } else {
       Alert.alert(
         'CREWONLY',
@@ -79,8 +79,8 @@ function ProductLi(props) {
           {props.isWish!=false?
           <TouchableOpacity onPress={() => onPressWish(item.pt_idx, (isWish===true?false:true))} 
           style={[styles.wishBtn1, {marginBottom: 4}]}>
-            {isWish===true ? <Image source={require('./../images/wish_on.png')} style={styles.imgContain} />
-            : <Image source={require('./../images/wish_off.png')} style={styles.imgContain} />}
+            {isWish===true ? <Image source={require('./../images/ico_heart_p.png')} style={styles.imgContain} />
+            : <Image source={require('./../images/ico_heart_w.png')} style={styles.imgContain} />}
           </TouchableOpacity> : null}
         </View>
       </View>

@@ -96,7 +96,7 @@ export const SocialBtn = (props) => {
   return (
     <TouchableOpacity onPress={onPress} style={[props.title?styles.container1:{marginHorizontal: 16}]} disabled={props.disabled} activeOpacity={1}>
       <View style={[styles.container0
-        , {borderWidth: 1, width: 48, height: 48, borderRadius: 48/2, borderColor: '#dfdfdf', backgroundColor: 'transparent', marginBottom: 12 }, style]}>
+        , {width: 48, height: 48, borderRadius: 48/2, marginBottom: 12}, style]}>
         {props.leftComponent ? props.leftComponent : null}
       </View>
       {props.title ? <Text style={[styles.ff1l, {textAlign: 'center', color: '#666', fontSize: 13, letterSpacing: -0.6}, textStyle]}>{props.title}</Text> : null}

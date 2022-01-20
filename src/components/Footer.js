@@ -26,7 +26,7 @@ function FooterWrap (props) {
     useEffect(() => {
       if (props.actMenu == "home") { setFimg1(require("../images/menu1_on.png")); setFtxt1(styles.clr5); }
       if (props.actMenu == "category") { setFimg2(require("../images/menu2_on.png")); setFtxt2(styles.clr5); }
-      if (props.actMenu == "zzim") { setFimg3(require("../images/menu3_on.png")); setFtxt3(styles.clr5); }
+      if (props.actMenu == "mylist") { setFimg3(require("../images/menu3_on.png")); setFtxt3(styles.clr5); }
       if (props.actMenu == "shop") { setFimg4(require("../images/menu4_on.png")); setFtxt4(styles.clr5); }
       if (props.actMenu == "mypage") { setFimg5(require("../images/menu5_on.png")); setFtxt5(styles.clr5); }
       
@@ -108,8 +108,8 @@ function FooterWrap (props) {
             <Text style={[styles.footTxt, styles.ff1m, ftxt2]}>{'CATEGORY'}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.container1} onPress={() => {onPressNav('Mylist')}}>
-            <Image source={fimg2} style={[styles.imgContain, styles.footIcn]} />
-            <Text style={[styles.footTxt, styles.ff1m, ftxt2]}>{'ZZIM'}</Text>
+            <Image source={fimg3} style={[styles.imgContain, styles.footIcn]} />
+            <Text style={[styles.footTxt, styles.ff1m, ftxt3]}>{'ZZIM'}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.container1} onPress={() => {onPressNav('ShopList')}}>
             <Image source={fimg4} style={[styles.imgContain, styles.footIcn]} />

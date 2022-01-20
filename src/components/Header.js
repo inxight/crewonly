@@ -169,7 +169,7 @@ function HeaderWrap(props) {
       <Left style={{flex: 0.18}}>
         {props.isSubmit ? 
         <TouchableOpacity style={[styles.menuTrigger]} onPress={() => props.type==='scmodal' ? props.navigation.goBack() : props.toggleModal()}>
-          <FeatherIcon name={'chevron-left'} size={28} color={'#888'} />
+          <Icon name={'arrowleft'} size={28} color={'#333'} />
         </TouchableOpacity> : null}
       </Left>
       <Body style={[styles.container1]}>
@@ -191,7 +191,7 @@ function HeaderWrap(props) {
     <Header style={[styles.bg2, styles.header, (route.name==='ProductSearch'?{height: 70}:null)]} androidStatusBarColor={'#000'}>
       <Left style={{flex: 0.18}}>
         <TouchableOpacity style={[styles.menuTrigger]} onPress={() => props.navigation.goBack()}>
-          <FeatherIcon name={'chevron-left'} size={28} color={'#888'} />
+          <Icon name={'arrowleft'} size={28} color={'#333'} />
         </TouchableOpacity>
       </Left>
       <Body>
@@ -206,7 +206,7 @@ function HeaderWrap(props) {
             />
           </View>
           <Button onPress={() => searchItem()} style={[styles.btnSearch, {height: 40}]}>
-            <Image source={require('./../images/ico_sch.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
+            <Image source={require('./../images/ico_search.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
           </Button>
         </View>
       </Body>
@@ -214,7 +214,7 @@ function HeaderWrap(props) {
       <Right style={{paddingRight: 10, flex: 0}}></Right>
       :(isKeyboardVisible ? null : <Right style={{flex: 0.18}}>
         <TouchableOpacity style={[styles.menuTrigger]} onPress={() => onPressNav('CartList')}>
-          <Image source={require('./../images/top_cart.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
+          <Image source={require('./../images/ico_cart.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
           {cartCount ? <View style={styles.cartCountBox}>
             <Text style={[styles.cartCount]}>{cartCount>99?'99+':cartCount}</Text>
           </View> : null}
@@ -242,7 +242,7 @@ function HeaderWrap(props) {
       </Body>
       <Right style={[{flex: 0.5}, styles.rowVerticalCHorizonR]}>
         {props.right==='none'?null: <TouchableOpacity style={[styles.menuTrigger]} onPress={() => onPressNav('CartList')}>
-          <Image source={require('./../images/top_cart.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
+          <Image source={require('./../images/ico_cart.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
           {cartCount ? <View style={styles.cartCountBox}>
             <Text style={[styles.cartCount]}>{cartCount>99?'99+':cartCount}</Text>
           </View> : null}
@@ -253,7 +253,7 @@ function HeaderWrap(props) {
     <Header style={[styles.bg2, styles.header, {elevation: 0}]} androidStatusBarColor={'#000'}>
       <Left style={{flex: 0.18}}>
         <TouchableOpacity style={[styles.menuTrigger]} onPress={() => props.navigation.goBack()}>
-          <FeatherIcon name={'chevron-left'} size={28} color={'#888'} />
+          <Icon name={'arrowleft'} size={28} color={'#333'} />
         </TouchableOpacity>
       </Left>
       <Body>
@@ -268,7 +268,7 @@ function HeaderWrap(props) {
             : (props.route.params ? (props.route.params.return_screen ? props.navigation.navigate(props.route.params.return_screen) : props.navigation.goBack())
               : props.navigation.goBack())
           ); }} style={[styles.menuTrigger]}>
-          <FeatherIcon name={'chevron-left'} size={28} color={'#888'} />
+          <Icon name={'arrowleft'} size={28} color={'#333'} />
           {/* <Image source={require('./../images/top_back.png')} style={[styles.imgContain, {width: 22, height: 22}]} /> */}
         </TouchableOpacity>
       </Left>
@@ -284,7 +284,7 @@ function HeaderWrap(props) {
         </TouchableOpacity>
         :
         <TouchableOpacity style={[styles.menuTrigger]} onPress={() => onPressNav('CartList')}>
-          <Image source={require('./../images/top_cart.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
+          <Image source={require('./../images/ico_cart.png')} style={[styles.imgContain, {width: 30, height: 30}]} />
           {cartCount ? <View style={styles.cartCountBox}>
             <Text style={[styles.cartCount]}>{cartCount>99?'99+':cartCount}</Text>
           </View> : null}

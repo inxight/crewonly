@@ -401,20 +401,16 @@ function Login(props){
 
           <View style={[styles.contentWrap4, styles.rowVerticalCenterB, {marginHorizontal: 10}]}>
             <SocialBtn title={''/*'카카오로 로그인'*/} onPress={() => kakaoLogin()} 
-              style={[{ borderColor: '#3c2622', borderWidth: 0, backgroundColor: '#FEE500' }]}
-              leftComponent={(<Image source={require('./../images/sns_kakao.png')} style={[styles.imgContain, {width: 22, height: 22}]} />)} />
+              leftComponent={(<Image source={require('./../images/sns_kakao.png')} style={[styles.imgContain]} />)} />
             <SocialBtn title={''/*'네이버로 로그인'*/} onPress={() => naverLogin()} 
-              style={[{ borderColor: '#2DB400', borderWidth: 0, backgroundColor: '#07b53b' }]}
-              leftComponent={(<Image source={require('./../images/sns_naver_w.png')} style={[styles.imgContain, {width: 24, height: 24}]} />)} />
+              leftComponent={(<Image source={require('./../images/sns_naver.png')} style={[styles.imgContain]} />)} />
             {//Platform.OS==='ios' && appleAuth.isSupported ?
             <SocialBtn title={''/*'Apple로 로그인'*/} onPress={() => appleLogin()} 
-              style={[{ borderColor: '#333', borderWidth: 0, backgroundColor: '#000' }]}
-              leftComponent={(<Image source={require('./../images/sns_apple_w.png')} style={[styles.imgContain, {width: 24, height: 24}]} />)} />// : null
+              leftComponent={(<Image source={require('./../images/sns_apple.png')} style={[styles.imgContain]} />)} />// : null
             }
             {/* {Platform.OS==='android' && appleAuthAndroid.isSupported ?
             <SocialBtn title={''} onPress={() => appleLogin_aos()} 
-              style={[{ borderColor: '#333', borderWidth: 0, backgroundColor: '#000' }]}
-              leftComponent={(<Image source={require('./../images/sns_apple_w.png')} style={[styles.imgContain, {width: 24, height: 24}]} />)} /> : null} */}
+              leftComponent={(<Image source={require('./../images/sns_apple.png')} style={[styles.imgContain]} />)} /> : null} */}
           </View>
         </View>
       </Content>
